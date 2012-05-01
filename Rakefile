@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Pc::Application.load_tasks
+Photocation::Application.load_tasks
