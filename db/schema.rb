@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120501210701) do
+ActiveRecord::Schema.define(:version => 20120501225009) do
+
+  create_table "locations", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.float    "lat"
+    t.float    "lon"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "photos", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "location_id"
+    t.string   "file"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -24,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20120501210701) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "image"
     t.string   "city"
     t.string   "state"
     t.string   "country"

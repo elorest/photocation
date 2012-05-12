@@ -1,4 +1,6 @@
 Photocation::Application.routes.draw do
+  resources :locations
+
   devise_for :users
 
   # The priority is based upon order of creation:

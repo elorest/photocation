@@ -35,13 +35,14 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       ## Token authenticatable
       # t.string :authentication_token
-
+      t.string :image
       t.string :city
       t.string :state
       t.string :country
       t.string :name_first
       t.string :name_last
       t.text :about
+
 
       t.timestamps
     end
